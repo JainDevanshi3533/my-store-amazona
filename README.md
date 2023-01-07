@@ -9,3 +9,4 @@
 5. Fetch products from Backend
 6. Manage State By Reducer hook & loading done
 7. Added Bootstrap
+8. Create Product and Rating Component
