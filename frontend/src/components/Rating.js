@@ -10,29 +10,29 @@ function Rating(props) {
     <div className="rating">
       {_.times(n, (p) => {
         arr.push(
-          <span>
-            <i key={p} className="fas fa-star" />
+          <span key={p}>
+            <i  className="fas fa-star" />
           </span>
         );
       })}
       {deci >= 0 && (
         <>
           {arr.push(
-            <span>
-              <i key={arr.length + 1} className="fas fa-star-half-alt" />
+            <span key={arr.length + 1}>
+              <i  className="fas fa-star-half-alt" />
             </span>
           )!=null ?<></> : <></>
           }
         </>
       )}
-      {_.times(rem, (p) => {
+      {_.times(rem, () => {
         arr.push(
-          <span>
-            <i key={arr.length + 1} className="far fa-star" />
+          <span key={arr.length + 1}>
+            <i  className="far fa-star" />
           </span>
         );
       })}
-
+      {/* {console.log(arr)} */}
       {arr}
       <span> {numReviews} reviews</span>
     </div>

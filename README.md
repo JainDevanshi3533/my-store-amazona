@@ -10,3 +10,4 @@
 6. Manage State By Reducer hook & loading done
 7. Added Bootstrap
 8. Create Product and Rating Component
+9. Implemented Product-details page and update title of each page using Helmet
