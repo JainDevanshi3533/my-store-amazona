@@ -11,3 +11,9 @@
 7. Added Bootstrap
 8. Create Product and Rating Component
 9. Implemented Product-details page and update title of each page using Helmet
+10. Create Loading Component and Message Component for wrong product-id(slug);
+11. Create Add to Cart ->
+    1. Create React Context
+    2. define reducer
+    3. create store provider
+    4. implement add to cart button click handler
