@@ -19,3 +19,6 @@
     4. implement add to cart button click handler
 
 12. Create Cart Screen
+13. Complete Cart Screen
+14. Create Signin Screen
+15. Connect to Mongodb database
