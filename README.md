@@ -21,4 +21,7 @@
 12. Create Cart Screen
 13. Complete Cart Screen
 14. Create Signin Screen
-15. Connect to Mongodb database
+15. Connect to Mongodb database.
+    ->created sample and productRoutes.
+16. Create/Seed Sample Users
+17. Create Signin Backend api
