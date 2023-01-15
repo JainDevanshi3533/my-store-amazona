@@ -38,3 +38,7 @@
 23. Implement Place Order Action
     -> handle place order action
     ->create order create api
+24. Create Order Screen
+    ->create backend api for order:/id;
+    ->fetch order api in frontend
+    -> ahow order information in 2 columns
