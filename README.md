@@ -27,3 +27,11 @@
 17. Create Signin Backend api
 18. Implemented Signin and signout actions
 19. Create Shipping Screen
+20. Create Signup Screen
+    -> create input forms 
+    -> create backend api
+21. Implement Select Payment Method Screen
+22. Create Place Order Screen
+    -> show cart items, payment, address
+    -> handle place order action
+    -> create order create api

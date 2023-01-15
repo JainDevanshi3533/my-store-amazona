@@ -9,29 +9,34 @@ import CheckoutSteps from '../components/CheckoutSteps';
 export default function ShippingAddressScreen() {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
-  const{
+  const {
     userInfo,
-    cart:{shippingAddress},
+    cart: { shippingAddress },
   } = state;
-
   const [fullName, setFullName] = useState(shippingAddress.fullName || '');
   const [address, setAddress] = useState(shippingAddress.address || '');
   const [city, setCity] = useState(shippingAddress.city || '');
-  const [postalCode, setPostalCode] = useState(shippingAddress.postalCode || '');
-  const [country, setCountry] = useState(shippingAddress.country || '');
-
-  useEffect(()=>{
-    if(!userInfo){
+  const [postalCode, setPostalCode] = useState(
+    shippingAddress.postalCode || ''
+  );
+  useEffect(() => {
+    if (!userInfo) {
       navigate('/signin?redirect=/shipping');
     }
-  },[userInfo ,navigate])
+  }, [userInfo, navigate]);
+  const [country, setCountry] = useState(shippingAddress.country || '');
   const submitHandler = (e) => {
     e.preventDefault();
     ctxDispatch({
       type: 'SAVE_SHIPPING_ADDRESS',
-      payload: { fullName, address, city, postalCode, country },
+      payload: {
+        fullName,
+        address,
+        city,
+        postalCode,
+        country,
+      },
     });
-
     localStorage.setItem(
       'shippingAddress',
       JSON.stringify({
@@ -44,17 +49,17 @@ export default function ShippingAddressScreen() {
     );
     navigate('/payment');
   };
-
   return (
-    <div >
+    <div>
       <Helmet>
         <title>Shipping Address</title>
       </Helmet>
+
       <CheckoutSteps step1 step2></CheckoutSteps>
       <div className="container small-container">
-      <h1 className="my-3">Shipping Address</h1>
+        <h1 className="my-3">Shipping Address</h1>
         <Form onSubmit={submitHandler}>
-          <Form.Group className="mb-3" controllId="fullName">
+          <Form.Group className="mb-3" controlId="fullName">
             <Form.Label>Full Name</Form.Label>
             <Form.Control
               value={fullName}
@@ -62,7 +67,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controllId="address">
+          <Form.Group className="mb-3" controlId="address">
             <Form.Label>Address</Form.Label>
             <Form.Control
               value={address}
@@ -70,7 +75,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controllId="city">
+          <Form.Group className="mb-3" controlId="city">
             <Form.Label>City</Form.Label>
             <Form.Control
               value={city}
@@ -78,7 +83,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controllId="postalCode">
+          <Form.Group className="mb-3" controlId="postalCode">
             <Form.Label>Postal Code</Form.Label>
             <Form.Control
               value={postalCode}
@@ -86,7 +91,7 @@ export default function ShippingAddressScreen() {
               required
             />
           </Form.Group>
-          <Form.Group className="mb-3" controllId="country">
+          <Form.Group className="mb-3" controlId="country">
             <Form.Label>Country</Form.Label>
             <Form.Control
               value={country}
