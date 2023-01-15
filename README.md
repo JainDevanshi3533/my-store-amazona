@@ -35,3 +35,6 @@
     -> show cart items, payment, address
     -> handle place order action
     -> create order create api
+23. Implement Place Order Action
+    -> handle place order action
+    ->create order create api
