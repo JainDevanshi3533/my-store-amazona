@@ -42,3 +42,9 @@
     ->create backend api for order:/id;
     ->fetch order api in frontend
     -> ahow order information in 2 columns
+
+25. Create Side Bar
+26. Create Search Screen
+    ->show filters
+    ->create api for searching products
+    ->display results
